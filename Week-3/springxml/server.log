@@ -1,0 +1,57 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.cognizant:springxml >-----------------------
+[INFO] Building springxml 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ springxml >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springxml ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ springxml ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springxml ---
+[INFO] skip non existing resourceDirectory C:\Users\dhara\OneDrive\Desktop\projects\DN-5.0 java exercises\Week-3\springxml\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ springxml ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ springxml <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ springxml ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-07-06T12:19:46.022+05:30  INFO 28496 --- [springxml] [           main] c.c.springlearn.SpringXmlApplication     : Starting SpringXmlApplication using Java 17.0.12 with PID 28496 (C:\Users\dhara\OneDrive\Desktop\projects\DN-5.0 java exercises\Week-3\springxml\target\classes started by Dharani Reddy in C:\Users\dhara\OneDrive\Desktop\projects\DN-5.0 java exercises\Week-3\springxml)
+2026-07-06T12:19:46.031+05:30  INFO 28496 --- [springxml] [           main] c.c.springlearn.SpringXmlApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-07-06T12:19:47.505+05:30  INFO 28496 --- [springxml] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-06T12:19:47.526+05:30  INFO 28496 --- [springxml] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-06T12:19:47.528+05:30  INFO 28496 --- [springxml] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-06T12:19:47.620+05:30  INFO 28496 --- [springxml] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-06T12:19:47.622+05:30  INFO 28496 --- [springxml] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1500 ms
+2026-07-06T12:19:48.394+05:30  INFO 28496 --- [springxml] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-06T12:19:48.406+05:30  INFO 28496 --- [springxml] [           main] c.c.springlearn.SpringXmlApplication     : Started SpringXmlApplication in 2.966 seconds (process running for 3.508)
+2026-07-06T12:20:38.339+05:30  INFO 28496 --- [springxml] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-06T12:20:38.342+05:30  INFO 28496 --- [springxml] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-06T12:20:38.343+05:30  INFO 28496 --- [springxml] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-06T12:20:38.378+05:30  INFO 28496 --- [springxml] [nio-8080-exec-1] c.c.s.controller.EmployeeController      : START - getAllEmployees()
+2026-07-06T12:20:38.381+05:30  INFO 28496 --- [springxml] [nio-8080-exec-1] c.c.s.controller.EmployeeController      : END - getAllEmployees()
+2026-07-06T12:20:51.622+05:30  INFO 28496 --- [springxml] [nio-8080-exec-2] c.c.s.controller.DepartmentController    : START - getAllDepartments()
+2026-07-06T12:20:51.622+05:30  INFO 28496 --- [springxml] [nio-8080-exec-2] c.c.s.controller.DepartmentController    : END - getAllDepartments()
+2026-07-06T12:22:34.695+05:30  INFO 28496 --- [springxml] [nio-8080-exec-5] c.c.s.controller.EmployeeController      : START - getAllEmployees()
+2026-07-06T12:22:34.696+05:30  INFO 28496 --- [springxml] [nio-8080-exec-5] c.c.s.controller.EmployeeController      : END - getAllEmployees()
+2026-07-06T12:22:53.327+05:30  INFO 28496 --- [springxml] [nio-8080-exec-8] c.c.s.controller.DepartmentController    : START - getAllDepartments()
+2026-07-06T12:22:53.329+05:30  INFO 28496 --- [springxml] [nio-8080-exec-8] c.c.s.controller.DepartmentController    : END - getAllDepartments()

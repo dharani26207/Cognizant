@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util
+		https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd" />
+	</bean>
+
+	<bean id="employeeOneDob" factory-bean="dateFormat" factory-method="parse">
+		<constructor-arg value="1990-05-15" />
+	</bean>
+
+	<bean id="employeeTwoDob" factory-bean="dateFormat" factory-method="parse">
+		<constructor-arg value="1988-11-22" />
+	</bean>
+
+	<bean id="employeeThreeDob" factory-bean="dateFormat" factory-method="parse">
+		<constructor-arg value="1992-03-10" />
+	</bean>
+
+	<bean id="employeeFourDob" factory-bean="dateFormat" factory-method="parse">
+		<constructor-arg value="1995-07-18" />
+	</bean>
+
+	<bean id="javaSkill" class="com.cognizant.springlearn.model.Skill">
+		<property name="id" value="1" />
+		<property name="name" value="Java" />
+	</bean>
+
+	<bean id="springSkill" class="com.cognizant.springlearn.model.Skill">
+		<property name="id" value="2" />
+		<property name="name" value="Spring" />
+	</bean>
+
+	<bean id="angularSkill" class="com.cognizant.springlearn.model.Skill">
+		<property name="id" value="3" />
+		<property name="name" value="Angular" />
+	</bean>
+
+	<bean id="testingSkill" class="com.cognizant.springlearn.model.Skill">
+		<property name="id" value="4" />
+		<property name="name" value="Testing" />
+	</bean>
+
+	<bean id="technologyDepartment" class="com.cognizant.springlearn.model.Department">
+		<property name="id" value="1" />
+		<property name="name" value="Technology" />
+	</bean>
+
+	<bean id="hrDepartment" class="com.cognizant.springlearn.model.Department">
+		<property name="id" value="2" />
+		<property name="name" value="Human Resources" />
+	</bean>
+
+	<bean id="financeDepartment" class="com.cognizant.springlearn.model.Department">
+		<property name="id" value="3" />
+		<property name="name" value="Finance" />
+	</bean>
+
+	<util:list id="departmentList" list-class="java.util.ArrayList">
+		<ref bean="technologyDepartment" />
+		<ref bean="hrDepartment" />
+		<ref bean="financeDepartment" />
+	</util:list>
+
+	<bean id="employeeOne" class="com.cognizant.springlearn.model.Employee">
+		<property name="id" value="1" />
+		<property name="name" value="John" />
+		<property name="salary" value="50000" />
+		<property name="permanent" value="true" />
+		<property name="department" ref="technologyDepartment" />
+		<property name="dateOfBirth" ref="employeeOneDob" />
+		<property name="skillList">
+			<list>
+				<ref bean="javaSkill" />
+				<ref bean="springSkill" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employeeTwo" class="com.cognizant.springlearn.model.Employee">
+		<property name="id" value="2" />
+		<property name="name" value="Jane" />
+		<property name="salary" value="65000" />
+		<property name="permanent" value="true" />
+		<property name="department" ref="hrDepartment" />
+		<property name="dateOfBirth" ref="employeeTwoDob" />
+		<property name="skillList">
+			<list>
+				<ref bean="angularSkill" />
+				<ref bean="testingSkill" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employeeThree" class="com.cognizant.springlearn.model.Employee">
+		<property name="id" value="3" />
+		<property name="name" value="Robert" />
+		<property name="salary" value="72000" />
+		<property name="permanent" value="false" />
+		<property name="department" ref="financeDepartment" />
+		<property name="dateOfBirth" ref="employeeThreeDob" />
+		<property name="skillList">
+			<list>
+				<ref bean="javaSkill" />
+				<ref bean="testingSkill" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employeeFour" class="com.cognizant.springlearn.model.Employee">
+		<property name="id" value="4" />
+		<property name="name" value="Maria" />
+		<property name="salary" value="58000" />
+		<property name="permanent" value="true" />
+		<property name="department" ref="technologyDepartment" />
+		<property name="dateOfBirth" ref="employeeFourDob" />
+		<property name="skillList">
+			<list>
+				<ref bean="springSkill" />
+				<ref bean="angularSkill" />
+			</list>
+		</property>
+	</bean>
+
+	<util:list id="employeeList" list-class="java.util.ArrayList">
+		<ref bean="employeeOne" />
+		<ref bean="employeeTwo" />
+		<ref bean="employeeThree" />
+		<ref bean="employeeFour" />
+	</util:list>
+</beans>
