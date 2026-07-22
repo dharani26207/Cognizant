@@ -1,0 +1,236 @@
+/* Global styling & Reset */
+body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background: radial-gradient(circle at top center, #1e293b 0%, #090d16 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.portal-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8 0%, #22c55e 100%); /* Blue to Cricket Green gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+/* Control Panel with toggle switches */
+.control-panel {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.control-label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.toggle-container {
+  display: flex;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 4px;
+  border-radius: 40px;
+}
+
+.toggle-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+  background: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+/* Container & Cards styling */
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.cricket-card {
+  background: rgba(30, 41, 59, 0.45);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cricket-card h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+/* Grid Layouts for lists */
+.grid-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.section-col h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+}
+
+/* Cricket Data Tables */
+.cricket-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cricket-table th, .cricket-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.cricket-table th {
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.cricket-table td {
+  color: #f1f5f9;
+}
+
+.filter-table th {
+  color: #ef4444; /* red highlights for filtered score limits */
+}
+
+.highlight-score {
+  color: #ef4444 !important;
+  font-weight: 700;
+}
+
+/* Indian Players List sections */
+.destructure-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.team-col {
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 16px;
+  padding: 20px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.team-col h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.players-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-li {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.player-li:last-child {
+  border-bottom: none;
+}
+
+/* Merged section */
+.merge-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+}
+
+.merge-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #22c55e;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.merged-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.merged-player-card {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .grid-sections, .destructure-section {
+    grid-template-columns: 1fr;
+  }
+}

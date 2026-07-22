@@ -1,0 +1,51 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <div class="profile-avatar">
+      {{ student.name.charAt(0) }}
+    </div>
+    <div class="profile-meta">
+      <h2>{{ student.name }}</h2>
+      <p class="profile-sub">{{ student.major }} • ID: {{ student.id }}</p>
+    </div>
+  </div>
+
+  <div class="profile-grid">
+    <div class="profile-card">
+      <div class="card-label">Email Address</div>
+      <div class="card-value">{{ student.email }}</div>
+    </div>
+    <div class="profile-card">
+      <div class="card-label">Current Semester</div>
+      <div class="card-value">{{ student.semester }}</div>
+    </div>
+    <div class="profile-card">
+      <div class="card-label">Cumulative GPA</div>
+      <div class="card-value gpa-value">{{ student.gpa }}</div>
+    </div>
+  </div>
+
+  <div class="academic-history">
+    <h3>Enrolled Courses & Academic Record</h3>
+    
+    <div class="table-responsive">
+      <table class="grades-table">
+        <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+            <th>Grade Earned</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of student.enrolledCourses">
+            <td><code class="course-code-badge">{{ course.code }}</code></td>
+            <td class="course-name-cell">{{ course.name }}</td>
+            <td>{{ course.credits }} Credits</td>
+            <td><span class="grade-badge">{{ course.grade }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
