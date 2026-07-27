@@ -1,0 +1,26 @@
+<div class="course-list-container">
+  <h2>Available Portal Courses</h2>
+  <p>Here you can explore all available courses, check your grades, and request enrollment.</p>
+
+  <div *ngIf="isLoading" class="loading-text">
+    Loading course catalog...
+  </div>
+
+  <ng-container *ngIf="!isLoading">
+    <div class="course-grid" *ngIf="courses.length > 0; else noCourses">
+      <app-course-card
+        *ngFor="let c of courses; let i = index; trackBy: trackByCourseId"
+        [course]="c"
+        (enrollRequested)="onEnroll($event)"
+      ></app-course-card>
+    </div>
+  </ng-container>
+
+  <ng-template #noCourses>
+    <p>No courses available at this time.</p>
+  </ng-template>
+
+  <div *ngIf="selectedCourseId" class="selected-course-info">
+    Selected Course ID for Enrollment: <strong>{{ selectedCourseId }}</strong>
+  </div>
+</div>

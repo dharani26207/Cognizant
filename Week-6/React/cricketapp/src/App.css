@@ -1,0 +1,268 @@
+:root {
+  --primary: #10b981; /* emerald green */
+  --primary-hover: #059669;
+  --bg-dark: #0f172a; /* deep slate */
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #34d399, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.flag-control {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.status-label {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.flag-status {
+  font-weight: bold;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.flag-true {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--primary);
+}
+
+.flag-false {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+
+.btn-toggle {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
+
+.btn-toggle:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+}
+
+.card-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.section-header h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.6rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.lists-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .lists-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.players-list-box {
+  background-color: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.players-list-box h4 {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.2rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 0.6rem;
+}
+
+.low-scorers-box h4 {
+  border-left-color: var(--danger);
+}
+
+.players-table-wrapper {
+  overflow-x: auto;
+}
+
+.players-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.players-table th, .players-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.players-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.score-value {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.score-value-low {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.low-score-row {
+  background-color: rgba(239, 68, 68, 0.02);
+}
+
+/* IndianPlayers styling */
+.odd-even-box h4 {
+  border-left-color: var(--warning);
+}
+
+.split-squads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.team-split h5 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.team-split ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-bullet {
+  padding: 0.6rem 0.8rem;
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.player-bullet.odd-item {
+  border-left: 3px solid var(--warning);
+}
+
+.player-bullet.even-item {
+  border-left: 3px solid #6366f1; /* purple-blue */
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-t20 {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+
+.badge-ranji {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

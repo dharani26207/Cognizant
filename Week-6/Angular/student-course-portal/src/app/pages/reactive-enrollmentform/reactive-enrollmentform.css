@@ -1,0 +1,140 @@
+.form-container {
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.form-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+.form-container p {
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-transform: none;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-primary);
+  cursor: pointer;
+}
+
+.additional-courses-section {
+  margin: 2.5rem 0 1.5rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.additional-courses-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.section-desc {
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.form-array-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-array-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.form-array-item .error-inline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.75rem;
+  color: var(--color-danger);
+}
+
+.array-input {
+  width: 100%;
+}
+
+.btn-remove {
+  background-color: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  color: var(--color-danger);
+  padding: 0.75rem 1.25rem;
+}
+
+.btn-remove:hover {
+  background-color: var(--color-danger);
+  color: var(--bg-primary);
+}
+
+.btn-add {
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.email-status-checking {
+  font-size: 0.825rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.email-status-checking::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(96, 165, 250, 0.2);
+  border-top-color: var(--color-info);
+  border-radius: 50%;
+  animation: spin 0.8s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

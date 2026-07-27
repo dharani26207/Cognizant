@@ -1,0 +1,347 @@
+:root {
+  --primary: #2563eb; /* sky blue */
+  --primary-hover: #1d4ed8;
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --success: #10b981;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.02) 0px, transparent 50%);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-logo {
+  font-size: 2rem;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-control {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.user-status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.user-status strong {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+.status-online {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+}
+
+.status-guest {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.auth-btn {
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.login-btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.logout-btn {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.logout-btn:hover {
+  background-color: rgba(239, 68, 68, 0.25);
+}
+
+.main-content {
+  flex: 1;
+}
+
+.portal-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-title h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.section-title p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Flight Grid */
+.flight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.flight-card {
+  background-color: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.flight-card:hover {
+  border-color: var(--primary);
+}
+
+.flight-route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.route-arrow {
+  color: var(--primary);
+}
+
+.flight-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.code-badge {
+  background-color: rgba(15, 23, 42, 0.7);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #fff;
+  border: 1px solid var(--border-color);
+}
+
+.flight-action-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.8rem;
+}
+
+.price-tag {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.btn-book-locked {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-book-locked:hover {
+  background-color: rgba(245, 158, 11, 0.2);
+}
+
+/* User booking layout */
+.booking-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .booking-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-input {
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+}
+
+.btn-submit-booking {
+  background-color: var(--success);
+  color: #0b0f19;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-submit-booking:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.booking-status-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-placeholder {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  border: 2px dashed var(--border-color);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.booking-receipt {
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.booking-receipt h4 {
+  margin: 0 0 1rem 0;
+  color: var(--success);
+}
+
+.receipt-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.receipt-details p {
+  margin: 0;
+}
+
+.ref-highlight {
+  color: var(--primary);
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.receipt-total {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.8rem;
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.total-highlight {
+  font-size: 1.3rem;
+  color: var(--success);
+}
+
+.app-footer {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

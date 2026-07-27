@@ -1,0 +1,14 @@
+angular.json — Workspace configuration file that defines build, serve, and test targets, asset paths, and style/script bundles for the Angular CLI.
+tsconfig.json — Root TypeScript compiler configuration shared across the workspace, including module resolution and strict type-checking options.
+tsconfig.app.json — TypeScript config scoped to the application source code, extending tsconfig.json with app-specific include/exclude paths.
+package.json — Lists npm dependencies, scripts (ng serve, ng build), and project metadata for the Student Course Portal.
+src/main.ts — Application entry point that bootstraps the root component (App) using bootstrapApplication and appConfig.
+src/app/app.config.ts — Standalone application configuration that registers providers such as the router and global error listeners (replaces app.module.ts in modern Angular).
+src/app/app.ts — Root component (App) that hosts the global layout, header, and router-outlet for page navigation.
+src/index.html — Single HTML page served to the browser; contains the <app-root> element where Angular mounts the application.
+
+Budgets (angular.json > architect > build > configurations > production > budgets):
+- initial bundle: maximumWarning 500kB, maximumError 1MB — warns/errors when the total initial JS/CSS bundle exceeds these sizes.
+- anyComponentStyle: maximumWarning 4kB, maximumError 8kB — warns/errors when any single component's styles exceed these sizes.
+
+ng build output: The compiled application JavaScript is in dist/student-course-portal/browser/main-*.js (hashed filename).
